@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM With Adarsh</title>
+</head>
+<body style = "background-color: black; color: white">
+    <div class="parent">
+
+        <div class="day">Monday</div>
+        <div class="day">Tuesday</div>
+        <div class="day">Wednesday</div>
+        <div class="day">Thursday</div>
+    </div>
+    
+</body>
+<script>
+
+    // target 1 -> parent element ko select kro and check kro kya kya values usme a rhi
+
+    const parent=document.querySelector(".parent");
+    // console.log(parent);
+    // console.log(parent.children);
+
+    // for (let index = 0; index < parent.children.length; index++) {
+    //     console.log(parent.children[index].innerHTML);
+        
+    // }
+    parent.children[1].style.color="orange"
+    // console.log(parent.firstElementChild.value);
+    // console.log(parent.lastElementChild);
+    const dayOne= document.querySelector('.day')
+    
+    // console.log(dayOne);
+    // console.log(dayOne.parentElement);
+    console.log("NODE : " ,parent.childNodes);
+
+
+
+</script>
+</html>
