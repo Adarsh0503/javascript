@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Events</title>
+</head>
+<body style="background-color: aliceblue;">
+    <h2>AMAZING IMAGES</h2>
+
+    <div>
+        <ul id="images">
+<li><img width="200px" id="one" src="https://images.pexels.com/photos/268533/pexels-photo-268533.jpeg?cs=srgb&dl=pexels-pixabay-268533.jpg&fm=jpg" alt="adarsh"></li>
+<li><img width="200px" id="two" src="https://images.pexels.com/photos/268533/pexels-photo-268533.jpeg?cs=srgb&dl=pexels-pixabay-268533.jpg&fm=jpg" alt=""></li>
+<li><img width="200px" id="three" src="https://images.pexels.com/photos/268533/pexels-photo-268533.jpeg?cs=srgb&dl=pexels-pixabay-268533.jpg&fm=jpg" alt=""></li>
+<li><img width="200px" id="four" src="https://images.pexels.com/photos/268533/pexels-photo-268533.jpeg?cs=srgb&dl=pexels-pixabay-268533.jpg&fm=jpg" alt=""></li>
+<li><img width="200px" id="five" src="https://images.pexels.com/photos/268533/pexels-photo-268533.jpeg?cs=srgb&dl=pexels-pixabay-268533.jpg&fm=jpg" alt=""></li>
+<li><a href="https://www.google.com/webhp?hl=en&sa=X&ved=0ahUKEwiQx87x5IOCAxVR2jgGHcrLCKkQPAgJ"  id="google">Google</a></li>
+
+
+
+
+        </ul>
+
+    </div>
+</body>
+<script>
+
+    // document.getElementById('two').onclick = function(){
+    //     alert("adarsh this is second image")
+    // }
+    // ye approach bhi utni achhi nhi as features utne nhi provide krta 
+    // instead use event listmers
+// best approach
+
+
+
+// document.getElementById('two').addEventListener('click',function(){
+//     alert("hehe ")
+// },false)
+
+// more approaches
+// attachEvent() naam ka function 
+//jquerry me -> on naam ka
+
+
+
+
+
+
+
+
+
+// document.getElementById('two').addEventListener('click',function(e){
+//     console.log(e);
+// },false)
+
+
+// ye padhana hai 
+
+// type ,timestamp , defaultPrevented, target, toElement, srcElement, currentTrget,
+// clientposition(x,y), offset, screenX screenY, TILTX, TILTY, 
+// alt key , ctrl key, shift key, (keycode)
+
+
+
+
+
+
+/// event propogation (basically ye jo third parameter hai (true/false))
+// by default false hota hai
+// as such koi diff nhi 
+// event propogation ka 2 context hote hai 
+// <!-- 1) event bubbling   -- false 
+// 2) event capturing  -- true 
+
+
+// document.getElementById('images').addEventListener('click',function(e){
+//     console.log("clicked inside the ul");
+// },false)
+
+// document.getElementById('two').addEventListener('click',function(e){
+//     console.log("two clciked");
+//     // e.stopPropagation() ye bubbling rokta hai 
+// },false)
+
+// inside se outside -> event bubbling
+
+
+
+// prevent default
+// document.getElementById('google').addEventListener('click', function(e){
+//     console.log('google clicked');
+//     e.preventDefault();
+//     // agar bubbling rokna hai to stop propgation 
+//     e.stopPropagation()
+// },false)
+
+
+// project -> 
+// Q-> jab bhi koi bhi image clcik kro to wo gayab ho jae
+
+const image= document.querySelector("#images").addEventListener('click',function(e){
+    console.log(e.target.parentNode);
+
+    let removeit=e.target.parentNode
+    // removeit.remove()    method 1  yhi use kro 
+    // removeit.parentNode.removeChild(removeit)   method 2
+    
+
+
+    // yehaa abhi google bhi chala jaega 
+
+    if(e.target.tagName==='IMG'){
+// TO PREVENT GOOGLE FROM ERASING AS ITS ALOS LI ITEM TO WO BHI DELETE HO JAEGA BHAI SAHAB
+// HERE WE ARE USING TAGNAME PROPERTY OF EVENTS 
+
+
+    removeit.remove()
+    }
+
+
+},false)
+
+
+
+
+
+
+
+</script>
+</html>
