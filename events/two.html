@@ -1,0 +1,72 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>
+        Adarsh Gaurav 
+    </h1>
+    <button class="stop">Stop</button>
+    
+</body>
+<script>
+
+    const sayAdarsh= function(){
+        console.log("Adarsh gauarv");
+    }
+// function 1
+    // setTimeout(function(){
+    //     console.log("Adarsh gauarv");
+    //     // prints my name after 2 sec 
+    // }, 2000)
+
+    // hum function ko as reference bhi de skte hai 
+    // setTimeout(sayAdarsh(), 2000)   ye galat as yeha function call ho rhi 
+
+    setTimeout(sayAdarsh, 2000)  // ye shi kyunki yeha refernce de rhe function ka
+
+
+    // setInterval(function(){
+    //     console.log("adarsh jod");
+    // }, 1000)
+</script>
+</html> -->
+
+
+<!-- // basicaly agar hume koi kaam kuch time k baad krna ho to aise ke skte hai  -->
+<!-- iska examplw ki kuch time k baad pop ups aate hai ki discount chal rha ye sign in ker lo -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> Adarsh Gaurav </h1>
+    <button class="stop">Stop</button>
+    
+</body>
+
+<script>
+
+    const change=  function(){
+        document.querySelector('h1').innerHTML="naam to suna hi hoga - Adarsh Gaurav"
+    }
+
+    const changeME = setTimeout(change, 2000);
+
+  // rokne k liye 
+
+    document.querySelector('.stop').addEventListener('click', function(){
+        clearTimeout(changeME)
+        console.log("stopped");
+        // ab jaise hi 2 sec se phle stop pr click krne se ki change nhi aaega
+    })
+</script>
+</html>

@@ -1,0 +1,27 @@
+// Js -> synchronous   (ek code execute then other code execute )
+//         single threaded language (ek thread me sabkuch hoga)
+
+//     execution context ->
+//     executes one line of code at a time
+//     console.log(1)  --1     (phle ye execute)
+//     iske execute hone k baad 
+//     console.log(2)  --2
+//     jab tak purana satement execute nhiu hua hai tab tak nae statement pr nhi aaya jata
+
+
+
+//     Blocking code                 vs                      Non Blocking code
+     
+//     blocks the flow of program                            Does not block the execution
+
+//     read file synch (ye blocking code hota hai)               Read file Asynvhronous \
+
+//     mostly in OS                                                    Does not wait  
+//     JITNA TIME LAGEGA TO WAIT KREGA WO
+
+                // dono ke apne alag alag benefits hai 
+                // jab hum chate hai ki result daalne se phle wait kro then blovking is good
+
+                
+
+
