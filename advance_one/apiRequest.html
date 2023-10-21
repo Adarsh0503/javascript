@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API</title>
+
+</head>
+<body>
+    <script>
+        const requesturl = "https://api.github.com/users/hiteshchoudhary"
+// sabse phle hum ek object bnate hai 
+    var xhr =   new XMLHttpRequest()
+    xhr.open('GET',requesturl);  // open apne aap me call nhi hota we use send for calling
+//    console.log("Here");    check krne k liye ki kaam ho rha ki nhi
+// console.log(xhr.readyState);   // 1 print ho rhi 
+// to continuoisly track
+        xhr.onreadystatechange = function(){
+            console.log(xhr.readyState)
+
+            // detecting states
+            if(xhr.readyState===4)
+            {
+                const data = JSON.parse(this.responseText)
+                console.log(data.followers);
+        }
+    }
+    xhr.send()
+
+    </script>
+    
+</body>
+</html>
